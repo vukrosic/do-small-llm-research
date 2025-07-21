@@ -1,9 +1,9 @@
 # 小型 Transformer 快速优化：15 分钟预训练消融实验 ![](https://img.shields.io/badge/lang-EN--中文-blue)
 
-[English](README.md) | **中文版本**
+[English](README.md) | **🇨🇳 中文版本**
 
-立即上手：**[Google Colab 一键运行](https://colab.research.google.com/drive/1Fn5Dw-8xKKSt915dwNvqLwA7V0Bdw0IY?usp=sharing)**  
-无法访问 Colab？直接下载 [GitHub Notebook](https://github.com/vukrosic/do-small-llm-research/blob/main/15min_llm_ablations.ipynb)
+🚀 **立即上手：** [Google Colab 一键运行](https://colab.research.google.com/drive/1Fn5Dw-8xKKSt915dwNvqLwA7V0Bdw0IY?usp=sharing)
+🌐 无法访问 Colab？📥 直接下载 [GitHub Notebook](https://github.com/vukrosic/do-small-llm-research/blob/main/15min_llm_ablations.ipynb)
 
 ---
 
