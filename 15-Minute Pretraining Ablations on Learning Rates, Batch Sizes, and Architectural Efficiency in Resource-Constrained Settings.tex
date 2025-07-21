@@ -30,6 +30,11 @@
 
 \maketitle
 
+\begin{center}
+\textbf{\href{https://colab.research.google.com/drive/1Fn5Dw-8xKKSt915dwNvqLwA7V0Bdw0IY?usp=sharing}{Colab Notebook}} $\cdot$
+\textbf{\href{https://github.com/vukrosic/do-small-llm-research}{GitHub Repository}}
+\end{center}
+
 % Abstract
 \begin{abstract}
 This paper presents a comprehensive ablation study of small-scale autoregressive Transformer language models, investigating the impact of key hyperparameters and architectural choices on training efficiency and performance in resource-constrained settings. We systematically evaluate six configurations across multiple dimensions: learning rate (\num{1e-4} to \num{1e-3}), batch size (8 to 16), sequence length (256 to 512), and model size (256 to 384 dimensions). Training was conducted on the SmolLM corpus using Tesla T4 GPU with mixed-precision training over 2000 steps (approximately 15 minutes per configuration). Despite the short training duration, our findings reveal significant performance variations, with larger batch sizes and appropriately scaled learning rates achieving superior performance, due to model seeing more data. The large batch configuration (batch size 16, learning rate \num{5e-4}) achieved the lowest training loss of 1.334 and highest accuracy of 69.8\%. Conversely, insufficient learning rates severely hamper convergence even in short runs, with the low learning rate configuration showing 4.5× higher perplexity. Model efficiency analysis demonstrates that smaller architectures provide better computational trade-offs, achieving 87.7 steps/second compared to 63.1 for larger models. These results provide practical guidance for rapid prototyping and optimization of autoregressive Transformers in resource-constrained environments.
