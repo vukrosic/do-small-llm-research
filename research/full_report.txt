@@ -1,0 +1,539 @@
+Looking for results in: training_logs
+✅ Loaded high_lr:
+   Steps: 0
+   train_loss: 2000 values out of 2000
+   train_loss_steps: 2000 values out of 2000
+   train_loss_timestamps: 2000 values out of 2000
+   learning_rate: 2000 values out of 2000
+   learning_rate_steps: 2000 values out of 2000
+   learning_rate_timestamps: 2000 values out of 2000
+   grad_norm: 2000 values out of 2000
+   grad_norm_steps: 2000 values out of 2000
+   grad_norm_timestamps: 2000 values out of 2000
+   step_time: 2000 values out of 2000
+   step_time_steps: 2000 values out of 2000
+   step_time_timestamps: 2000 values out of 2000
+   accuracy: 5 values out of 5
+     Sample values: [0.01611328125, 0.200439453125, 0.256591796875, 0.319091796875, 0.412109375]
+   accuracy_steps: 5 values out of 5
+   accuracy_timestamps: 5 values out of 5
+   perplexity: 5 values out of 5
+     Sample values: [50457.80431264488, 173.79277078503122, 82.28090665469591, 30.135216905750916, 18.824468460556883]
+   perplexity_steps: 5 values out of 5
+   perplexity_timestamps: 5 values out of 5
+   avg_confidence: 5 values out of 5
+     Sample values: [0.0014476776123046875, 0.195068359375, 0.2509765625, 0.295654296875, 0.34521484375]
+   avg_confidence_steps: 5 values out of 5
+   avg_confidence_timestamps: 5 values out of 5
+   entropy: 5 values out of 5
+   entropy_steps: 5 values out of 5
+   entropy_timestamps: 5 values out of 5
+   top5_accuracy: 5 values out of 5
+     Sample values: [0.016357421875, 0.375, 0.45947265625, 0.580078125, 0.6591796875]
+   top5_accuracy_steps: 5 values out of 5
+   top5_accuracy_timestamps: 5 values out of 5
+   total_tokens: 5 values out of 5
+   total_tokens_steps: 5 values out of 5
+   total_tokens_timestamps: 5 values out of 5
+   correct_tokens: 5 values out of 5
+   correct_tokens_steps: 5 values out of 5
+   correct_tokens_timestamps: 5 values out of 5
+   eval_loss: 5 values out of 5
+   eval_loss_steps: 5 values out of 5
+   eval_loss_timestamps: 5 values out of 5
+   eval_accuracy: 5 values out of 5
+   eval_accuracy_steps: 5 values out of 5
+   eval_accuracy_timestamps: 5 values out of 5
+   eval_perplexity: 5 values out of 5
+   eval_perplexity_steps: 5 values out of 5
+   eval_perplexity_timestamps: 5 values out of 5
+   eval_avg_confidence: 5 values out of 5
+   eval_avg_confidence_steps: 5 values out of 5
+   eval_avg_confidence_timestamps: 5 values out of 5
+   eval_entropy: 5 values out of 5
+   eval_entropy_steps: 5 values out of 5
+   eval_entropy_timestamps: 5 values out of 5
+   eval_top5_accuracy: 5 values out of 5
+   eval_top5_accuracy_steps: 5 values out of 5
+   eval_top5_accuracy_timestamps: 5 values out of 5
+✅ Loaded short_seq:
+   Steps: 0
+   train_loss: 2000 values out of 2000
+   train_loss_steps: 2000 values out of 2000
+   train_loss_timestamps: 2000 values out of 2000
+   learning_rate: 2000 values out of 2000
+   learning_rate_steps: 2000 values out of 2000
+   learning_rate_timestamps: 2000 values out of 2000
+   grad_norm: 2000 values out of 2000
+   grad_norm_steps: 2000 values out of 2000
+   grad_norm_timestamps: 2000 values out of 2000
+   step_time: 2000 values out of 2000
+   step_time_steps: 2000 values out of 2000
+   step_time_timestamps: 2000 values out of 2000
+   accuracy: 5 values out of 5
+     Sample values: [0.014322916977107525, 0.1923828125, 0.28515625, 0.3160807490348816, 0.3486328125]
+   accuracy_steps: 5 values out of 5
+   accuracy_timestamps: 5 values out of 5
+   perplexity: 5 values out of 5
+     Sample values: [49856.020043092205, 327.77890958116524, 114.57351387458085, 60.91648002260715, 43.69459028318509]
+   perplexity_steps: 5 values out of 5
+   perplexity_timestamps: 5 values out of 5
+   avg_confidence: 5 values out of 5
+     Sample values: [0.00148773193359375, 0.19482421875, 0.239013671875, 0.268310546875, 0.29052734375]
+   avg_confidence_steps: 5 values out of 5
+   avg_confidence_timestamps: 5 values out of 5
+   entropy: 5 values out of 5
+   entropy_steps: 5 values out of 5
+   entropy_timestamps: 5 values out of 5
+   top5_accuracy: 5 values out of 5
+     Sample values: [0.014322916666666666, 0.3528645833333333, 0.455078125, 0.5289713541666666, 0.5514322916666666]
+   top5_accuracy_steps: 5 values out of 5
+   top5_accuracy_timestamps: 5 values out of 5
+   total_tokens: 5 values out of 5
+   total_tokens_steps: 5 values out of 5
+   total_tokens_timestamps: 5 values out of 5
+   correct_tokens: 5 values out of 5
+   correct_tokens_steps: 5 values out of 5
+   correct_tokens_timestamps: 5 values out of 5
+   eval_loss: 5 values out of 5
+   eval_loss_steps: 5 values out of 5
+   eval_loss_timestamps: 5 values out of 5
+   eval_accuracy: 5 values out of 5
+   eval_accuracy_steps: 5 values out of 5
+   eval_accuracy_timestamps: 5 values out of 5
+   eval_perplexity: 5 values out of 5
+   eval_perplexity_steps: 5 values out of 5
+   eval_perplexity_timestamps: 5 values out of 5
+   eval_avg_confidence: 5 values out of 5
+   eval_avg_confidence_steps: 5 values out of 5
+   eval_avg_confidence_timestamps: 5 values out of 5
+   eval_entropy: 5 values out of 5
+   eval_entropy_steps: 5 values out of 5
+   eval_entropy_timestamps: 5 values out of 5
+   eval_top5_accuracy: 5 values out of 5
+   eval_top5_accuracy_steps: 5 values out of 5
+   eval_top5_accuracy_timestamps: 5 values out of 5
+✅ Loaded baseline:
+   Steps: 0
+   train_loss: 2000 values out of 2000
+   train_loss_steps: 2000 values out of 2000
+   train_loss_timestamps: 2000 values out of 2000
+   learning_rate: 2000 values out of 2000
+   learning_rate_steps: 2000 values out of 2000
+   learning_rate_timestamps: 2000 values out of 2000
+   grad_norm: 2000 values out of 2000
+   grad_norm_steps: 2000 values out of 2000
+   grad_norm_timestamps: 2000 values out of 2000
+   step_time: 2000 values out of 2000
+   step_time_steps: 2000 values out of 2000
+   step_time_timestamps: 2000 values out of 2000
+   accuracy: 5 values out of 5
+     Sample values: [0.01318359375, 0.21533203125, 0.255126953125, 0.314697265625, 0.304443359375]
+   accuracy_steps: 5 values out of 5
+   accuracy_timestamps: 5 values out of 5
+   perplexity: 5 values out of 5
+     Sample values: [50498.09709303937, 251.81738608137283, 112.86915086625599, 55.404157517685526, 48.85239876813527]
+   perplexity_steps: 5 values out of 5
+   perplexity_timestamps: 5 values out of 5
+   avg_confidence: 5 values out of 5
+     Sample values: [0.0014867782592773438, 0.19873046875, 0.227783203125, 0.2666015625, 0.260009765625]
+   avg_confidence_steps: 5 values out of 5
+   avg_confidence_timestamps: 5 values out of 5
+   entropy: 5 values out of 5
+   entropy_steps: 5 values out of 5
+   entropy_timestamps: 5 values out of 5
+   top5_accuracy: 5 values out of 5
+     Sample values: [0.01318359375, 0.371826171875, 0.451416015625, 0.524169921875, 0.535888671875]
+   top5_accuracy_steps: 5 values out of 5
+   top5_accuracy_timestamps: 5 values out of 5
+   total_tokens: 5 values out of 5
+   total_tokens_steps: 5 values out of 5
+   total_tokens_timestamps: 5 values out of 5
+   correct_tokens: 5 values out of 5
+   correct_tokens_steps: 5 values out of 5
+   correct_tokens_timestamps: 5 values out of 5
+   eval_loss: 5 values out of 5
+   eval_loss_steps: 5 values out of 5
+   eval_loss_timestamps: 5 values out of 5
+   eval_accuracy: 5 values out of 5
+   eval_accuracy_steps: 5 values out of 5
+   eval_accuracy_timestamps: 5 values out of 5
+   eval_perplexity: 5 values out of 5
+   eval_perplexity_steps: 5 values out of 5
+   eval_perplexity_timestamps: 5 values out of 5
+   eval_avg_confidence: 5 values out of 5
+   eval_avg_confidence_steps: 5 values out of 5
+   eval_avg_confidence_timestamps: 5 values out of 5
+   eval_entropy: 5 values out of 5
+   eval_entropy_steps: 5 values out of 5
+   eval_entropy_timestamps: 5 values out of 5
+   eval_top5_accuracy: 5 values out of 5
+   eval_top5_accuracy_steps: 5 values out of 5
+   eval_top5_accuracy_timestamps: 5 values out of 5
+✅ Loaded large_batch:
+   Steps: 0
+   train_loss: 2000 values out of 2000
+   train_loss_steps: 2000 values out of 2000
+   train_loss_timestamps: 2000 values out of 2000
+   learning_rate: 2000 values out of 2000
+   learning_rate_steps: 2000 values out of 2000
+   learning_rate_timestamps: 2000 values out of 2000
+   grad_norm: 2000 values out of 2000
+   grad_norm_steps: 2000 values out of 2000
+   grad_norm_timestamps: 2000 values out of 2000
+   step_time: 2000 values out of 2000
+   step_time_steps: 2000 values out of 2000
+   step_time_timestamps: 2000 values out of 2000
+   accuracy: 5 values out of 5
+     Sample values: [0.014892578125, 0.2625732421875, 0.3209228515625, 0.509765625, 0.6983642578125]
+   accuracy_steps: 5 values out of 5
+   accuracy_timestamps: 5 values out of 5
+   perplexity: 5 values out of 5
+     Sample values: [49902.63730167989, 104.06321493683463, 36.66713276451822, 11.956942075372574, 4.926475990865711]
+   perplexity_steps: 5 values out of 5
+   perplexity_timestamps: 5 values out of 5
+   avg_confidence: 5 values out of 5
+     Sample values: [0.00145721435546875, 0.2205810546875, 0.30078125, 0.404541015625, 0.50244140625]
+   avg_confidence_steps: 5 values out of 5
+   avg_confidence_timestamps: 5 values out of 5
+   entropy: 5 values out of 5
+   entropy_steps: 5 values out of 5
+   entropy_timestamps: 5 values out of 5
+   top5_accuracy: 5 values out of 5
+     Sample values: [0.0150146484375, 0.4647216796875, 0.5494384765625, 0.7227783203125, 0.8763427734375]
+   top5_accuracy_steps: 5 values out of 5
+   top5_accuracy_timestamps: 5 values out of 5
+   total_tokens: 5 values out of 5
+   total_tokens_steps: 5 values out of 5
+   total_tokens_timestamps: 5 values out of 5
+   correct_tokens: 5 values out of 5
+   correct_tokens_steps: 5 values out of 5
+   correct_tokens_timestamps: 5 values out of 5
+   eval_loss: 5 values out of 5
+   eval_loss_steps: 5 values out of 5
+   eval_loss_timestamps: 5 values out of 5
+   eval_accuracy: 5 values out of 5
+   eval_accuracy_steps: 5 values out of 5
+   eval_accuracy_timestamps: 5 values out of 5
+   eval_perplexity: 5 values out of 5
+   eval_perplexity_steps: 5 values out of 5
+   eval_perplexity_timestamps: 5 values out of 5
+   eval_avg_confidence: 5 values out of 5
+   eval_avg_confidence_steps: 5 values out of 5
+   eval_avg_confidence_timestamps: 5 values out of 5
+   eval_entropy: 5 values out of 5
+   eval_entropy_steps: 5 values out of 5
+   eval_entropy_timestamps: 5 values out of 5
+   eval_top5_accuracy: 5 values out of 5
+   eval_top5_accuracy_steps: 5 values out of 5
+   eval_top5_accuracy_timestamps: 5 values out of 5
+✅ Loaded low_lr:
+   Steps: 0
+   train_loss: 2000 values out of 2000
+   train_loss_steps: 2000 values out of 2000
+   train_loss_timestamps: 2000 values out of 2000
+   learning_rate: 2000 values out of 2000
+   learning_rate_steps: 2000 values out of 2000
+   learning_rate_timestamps: 2000 values out of 2000
+   grad_norm: 2000 values out of 2000
+   grad_norm_steps: 2000 values out of 2000
+   grad_norm_timestamps: 2000 values out of 2000
+   step_time: 2000 values out of 2000
+   step_time_steps: 2000 values out of 2000
+   step_time_timestamps: 2000 values out of 2000
+   accuracy: 5 values out of 5
+     Sample values: [0.015869140625, 0.171630859375, 0.21337890625, 0.24169921875, 0.253662109375]
+   accuracy_steps: 5 values out of 5
+   accuracy_timestamps: 5 values out of 5
+   perplexity: 5 values out of 5
+     Sample values: [49864.10358733699, 562.6221257521954, 258.3090613593886, 177.4850559560461, 178.18183690462678]
+   perplexity_steps: 5 values out of 5
+   perplexity_timestamps: 5 values out of 5
+   avg_confidence: 5 values out of 5
+     Sample values: [0.001537322998046875, 0.1646728515625, 0.1949462890625, 0.21484375, 0.2166748046875]
+   avg_confidence_steps: 5 values out of 5
+   avg_confidence_timestamps: 5 values out of 5
+   entropy: 5 values out of 5
+   entropy_steps: 5 values out of 5
+   entropy_timestamps: 5 values out of 5
+   top5_accuracy: 5 values out of 5
+     Sample values: [0.015869140625, 0.304931640625, 0.38818359375, 0.419189453125, 0.41748046875]
+   top5_accuracy_steps: 5 values out of 5
+   top5_accuracy_timestamps: 5 values out of 5
+   total_tokens: 5 values out of 5
+   total_tokens_steps: 5 values out of 5
+   total_tokens_timestamps: 5 values out of 5
+   correct_tokens: 5 values out of 5
+   correct_tokens_steps: 5 values out of 5
+   correct_tokens_timestamps: 5 values out of 5
+   eval_loss: 5 values out of 5
+   eval_loss_steps: 5 values out of 5
+   eval_loss_timestamps: 5 values out of 5
+   eval_accuracy: 5 values out of 5
+   eval_accuracy_steps: 5 values out of 5
+   eval_accuracy_timestamps: 5 values out of 5
+   eval_perplexity: 5 values out of 5
+   eval_perplexity_steps: 5 values out of 5
+   eval_perplexity_timestamps: 5 values out of 5
+   eval_avg_confidence: 5 values out of 5
+   eval_avg_confidence_steps: 5 values out of 5
+   eval_avg_confidence_timestamps: 5 values out of 5
+   eval_entropy: 5 values out of 5
+   eval_entropy_steps: 5 values out of 5
+   eval_entropy_timestamps: 5 values out of 5
+   eval_top5_accuracy: 5 values out of 5
+   eval_top5_accuracy_steps: 5 values out of 5
+   eval_top5_accuracy_timestamps: 5 values out of 5
+✅ Loaded small_model:
+   Steps: 0
+   train_loss: 2000 values out of 2000
+   train_loss_steps: 2000 values out of 2000
+   train_loss_timestamps: 2000 values out of 2000
+   learning_rate: 2000 values out of 2000
+   learning_rate_steps: 2000 values out of 2000
+   learning_rate_timestamps: 2000 values out of 2000
+   grad_norm: 2000 values out of 2000
+   grad_norm_steps: 2000 values out of 2000
+   grad_norm_timestamps: 2000 values out of 2000
+   step_time: 2000 values out of 2000
+   step_time_steps: 2000 values out of 2000
+   step_time_timestamps: 2000 values out of 2000
+   accuracy: 5 values out of 5
+     Sample values: [0.0172526054084301, 0.2052408903837204, 0.2513020932674408, 0.2732747495174408, 0.29443359375]
+   accuracy_steps: 5 values out of 5
+   accuracy_timestamps: 5 values out of 5
+   perplexity: 5 values out of 5
+     Sample values: [48415.10538147427, 301.7278901382283, 130.40382557947356, 84.29530519963942, 77.24826382479674]
+   perplexity_steps: 5 values out of 5
+   perplexity_timestamps: 5 values out of 5
+   avg_confidence: 5 values out of 5
+     Sample values: [0.000820159912109375, 0.197509765625, 0.2210693359375, 0.2349853515625, 0.2578125]
+   avg_confidence_steps: 5 values out of 5
+   avg_confidence_timestamps: 5 values out of 5
+   entropy: 5 values out of 5
+   entropy_steps: 5 values out of 5
+   entropy_timestamps: 5 values out of 5
+   top5_accuracy: 5 values out of 5
+     Sample values: [0.017252604166666668, 0.3548177083333333, 0.4420572916666667, 0.47314453125, 0.4908854166666667]
+   top5_accuracy_steps: 5 values out of 5
+   top5_accuracy_timestamps: 5 values out of 5
+   total_tokens: 5 values out of 5
+   total_tokens_steps: 5 values out of 5
+   total_tokens_timestamps: 5 values out of 5
+   correct_tokens: 5 values out of 5
+   correct_tokens_steps: 5 values out of 5
+   correct_tokens_timestamps: 5 values out of 5
+   eval_loss: 5 values out of 5
+   eval_loss_steps: 5 values out of 5
+   eval_loss_timestamps: 5 values out of 5
+   eval_accuracy: 5 values out of 5
+   eval_accuracy_steps: 5 values out of 5
+   eval_accuracy_timestamps: 5 values out of 5
+   eval_perplexity: 5 values out of 5
+   eval_perplexity_steps: 5 values out of 5
+   eval_perplexity_timestamps: 5 values out of 5
+   eval_avg_confidence: 5 values out of 5
+   eval_avg_confidence_steps: 5 values out of 5
+   eval_avg_confidence_timestamps: 5 values out of 5
+   eval_entropy: 5 values out of 5
+   eval_entropy_steps: 5 values out of 5
+   eval_entropy_timestamps: 5 values out of 5
+   eval_top5_accuracy: 5 values out of 5
+   eval_top5_accuracy_steps: 5 values out of 5
+   eval_top5_accuracy_timestamps: 5 values out of 5
+📊 Total configurations loaded: 6
+🎨 Generating plots based on available data...
+Available metrics: {'eval_accuracy_steps', 'perplexity_steps', 'step_time', 'entropy_timestamps', 'eval_avg_confidence', 'step_time_steps', 'eval_loss_steps', 'avg_confidence_timestamps', 'eval_perplexity_timestamps', 'eval_loss_timestamps', 'eval_top5_accuracy', 'accuracy', 'perplexity_timestamps', 'eval_top5_accuracy_steps', 'eval_avg_confidence_steps', 'learning_rate_steps', 'eval_accuracy', 'accuracy_steps', 'train_loss', 'entropy', 'correct_tokens_timestamps', 'eval_entropy_steps', 'grad_norm', 'learning_rate', 'train_loss_steps', 'entropy_steps', 'eval_entropy', 'eval_loss', 'accuracy_timestamps', 'top5_accuracy', 'perplexity', 'top5_accuracy_timestamps', 'eval_perplexity', 'train_loss_timestamps', 'eval_top5_accuracy_timestamps', 'eval_avg_confidence_timestamps', 'grad_norm_steps', 'total_tokens_timestamps', 'eval_perplexity_steps', 'learning_rate_timestamps', 'grad_norm_timestamps', 'eval_entropy_timestamps', 'avg_confidence_steps', 'correct_tokens_steps', 'step_time_timestamps', 'correct_tokens', 'total_tokens', 'eval_accuracy_timestamps', 'total_tokens_steps', 'avg_confidence', 'top5_accuracy_steps'}
+Debug accuracy: 5 values, 5 steps
+Valid pair found: step 0, value 0.01611328125
+Valid pair found: step 400, value 0.200439453125
+Valid pair found: step 800, value 0.256591796875
+Valid pair found: step 1200, value 0.319091796875
+Valid pair found: step 1600, value 0.412109375
+Returning 5 points for accuracy: steps (0, 400, 800, 1200, 1600)
+Debug accuracy: 5 values, 5 steps
+Valid pair found: step 0, value 0.014322916977107525
+Valid pair found: step 400, value 0.1923828125
+Valid pair found: step 800, value 0.28515625
+Valid pair found: step 1200, value 0.3160807490348816
+Valid pair found: step 1600, value 0.3486328125
+Returning 5 points for accuracy: steps (0, 400, 800, 1200, 1600)
+Debug accuracy: 5 values, 5 steps
+Valid pair found: step 0, value 0.01318359375
+Valid pair found: step 400, value 0.21533203125
+Valid pair found: step 800, value 0.255126953125
+Valid pair found: step 1200, value 0.314697265625
+Valid pair found: step 1600, value 0.304443359375
+Returning 5 points for accuracy: steps (0, 400, 800, 1200, 1600)
+Debug accuracy: 5 values, 5 steps
+Valid pair found: step 0, value 0.014892578125
+Valid pair found: step 400, value 0.2625732421875
+Valid pair found: step 800, value 0.3209228515625
+Valid pair found: step 1200, value 0.509765625
+Valid pair found: step 1600, value 0.6983642578125
+Returning 5 points for accuracy: steps (0, 400, 800, 1200, 1600)
+Debug accuracy: 5 values, 5 steps
+Valid pair found: step 0, value 0.015869140625
+Valid pair found: step 400, value 0.171630859375
+Valid pair found: step 800, value 0.21337890625
+Valid pair found: step 1200, value 0.24169921875
+Valid pair found: step 1600, value 0.253662109375
+Returning 5 points for accuracy: steps (0, 400, 800, 1200, 1600)
+Debug accuracy: 5 values, 5 steps
+Valid pair found: step 0, value 0.0172526054084301
+Valid pair found: step 400, value 0.2052408903837204
+Valid pair found: step 800, value 0.2513020932674408
+Valid pair found: step 1200, value 0.2732747495174408
+Valid pair found: step 1600, value 0.29443359375
+Returning 5 points for accuracy: steps (0, 400, 800, 1200, 1600)
+Debug perplexity: 5 values, 5 steps
+Valid pair found: step 0, value 50457.80431264488
+Valid pair found: step 400, value 173.79277078503122
+Valid pair found: step 800, value 82.28090665469591
+Valid pair found: step 1200, value 30.135216905750916
+Valid pair found: step 1600, value 18.824468460556883
+Returning 5 points for perplexity: steps (0, 400, 800, 1200, 1600)
+Debug perplexity: 5 values, 5 steps
+Valid pair found: step 0, value 49856.020043092205
+Valid pair found: step 400, value 327.77890958116524
+Valid pair found: step 800, value 114.57351387458085
+Valid pair found: step 1200, value 60.91648002260715
+Valid pair found: step 1600, value 43.69459028318509
+Returning 5 points for perplexity: steps (0, 400, 800, 1200, 1600)
+Debug perplexity: 5 values, 5 steps
+Valid pair found: step 0, value 50498.09709303937
+Valid pair found: step 400, value 251.81738608137283
+Valid pair found: step 800, value 112.86915086625599
+Valid pair found: step 1200, value 55.404157517685526
+Valid pair found: step 1600, value 48.85239876813527
+Returning 5 points for perplexity: steps (0, 400, 800, 1200, 1600)
+Debug perplexity: 5 values, 5 steps
+Valid pair found: step 0, value 49902.63730167989
+Valid pair found: step 400, value 104.06321493683463
+Valid pair found: step 800, value 36.66713276451822
+Valid pair found: step 1200, value 11.956942075372574
+Valid pair found: step 1600, value 4.926475990865711
+Returning 5 points for perplexity: steps (0, 400, 800, 1200, 1600)
+Debug perplexity: 5 values, 5 steps
+Valid pair found: step 0, value 49864.10358733699
+Valid pair found: step 400, value 562.6221257521954
+Valid pair found: step 800, value 258.3090613593886
+Valid pair found: step 1200, value 177.4850559560461
+Valid pair found: step 1600, value 178.18183690462678
+Returning 5 points for perplexity: steps (0, 400, 800, 1200, 1600)
+Debug perplexity: 5 values, 5 steps
+Valid pair found: step 0, value 48415.10538147427
+Valid pair found: step 400, value 301.7278901382283
+Valid pair found: step 800, value 130.40382557947356
+Valid pair found: step 1200, value 84.29530519963942
+Valid pair found: step 1600, value 77.24826382479674
+Returning 5 points for perplexity: steps (0, 400, 800, 1200, 1600)
+Debug avg_confidence: 5 values, 5 steps
+Valid pair found: step 0, value 0.0014476776123046875
+Valid pair found: step 400, value 0.195068359375
+Valid pair found: step 800, value 0.2509765625
+Valid pair found: step 1200, value 0.295654296875
+Valid pair found: step 1600, value 0.34521484375
+Returning 5 points for avg_confidence: steps (0, 400, 800, 1200, 1600)
+Debug avg_confidence: 5 values, 5 steps
+Valid pair found: step 0, value 0.00148773193359375
+Valid pair found: step 400, value 0.19482421875
+Valid pair found: step 800, value 0.239013671875
+Valid pair found: step 1200, value 0.268310546875
+Valid pair found: step 1600, value 0.29052734375
+Returning 5 points for avg_confidence: steps (0, 400, 800, 1200, 1600)
+Debug avg_confidence: 5 values, 5 steps
+Valid pair found: step 0, value 0.0014867782592773438
+Valid pair found: step 400, value 0.19873046875
+Valid pair found: step 800, value 0.227783203125
+Valid pair found: step 1200, value 0.2666015625
+Valid pair found: step 1600, value 0.260009765625
+Returning 5 points for avg_confidence: steps (0, 400, 800, 1200, 1600)
+Debug avg_confidence: 5 values, 5 steps
+Valid pair found: step 0, value 0.00145721435546875
+Valid pair found: step 400, value 0.2205810546875
+Valid pair found: step 800, value 0.30078125
+Valid pair found: step 1200, value 0.404541015625
+Valid pair found: step 1600, value 0.50244140625
+Returning 5 points for avg_confidence: steps (0, 400, 800, 1200, 1600)
+Debug avg_confidence: 5 values, 5 steps
+Valid pair found: step 0, value 0.001537322998046875
+Valid pair found: step 400, value 0.1646728515625
+Valid pair found: step 800, value 0.1949462890625
+Valid pair found: step 1200, value 0.21484375
+Valid pair found: step 1600, value 0.2166748046875
+Returning 5 points for avg_confidence: steps (0, 400, 800, 1200, 1600)
+Debug avg_confidence: 5 values, 5 steps
+Valid pair found: step 0, value 0.000820159912109375
+Valid pair found: step 400, value 0.197509765625
+Valid pair found: step 800, value 0.2210693359375
+Valid pair found: step 1200, value 0.2349853515625
+Valid pair found: step 1600, value 0.2578125
+Returning 5 points for avg_confidence: steps (0, 400, 800, 1200, 1600)
+Debug top5_accuracy: 5 values, 5 steps
+Valid pair found: step 0, value 0.016357421875
+Valid pair found: step 400, value 0.375
+Valid pair found: step 800, value 0.45947265625
+Valid pair found: step 1200, value 0.580078125
+Valid pair found: step 1600, value 0.6591796875
+Returning 5 points for top5_accuracy: steps (0, 400, 800, 1200, 1600)
+Debug top5_accuracy: 5 values, 5 steps
+Valid pair found: step 0, value 0.014322916666666666
+Valid pair found: step 400, value 0.3528645833333333
+Valid pair found: step 800, value 0.455078125
+Valid pair found: step 1200, value 0.5289713541666666
+Valid pair found: step 1600, value 0.5514322916666666
+Returning 5 points for top5_accuracy: steps (0, 400, 800, 1200, 1600)
+Debug top5_accuracy: 5 values, 5 steps
+Valid pair found: step 0, value 0.01318359375
+Valid pair found: step 400, value 0.371826171875
+Valid pair found: step 800, value 0.451416015625
+Valid pair found: step 1200, value 0.524169921875
+Valid pair found: step 1600, value 0.535888671875
+Returning 5 points for top5_accuracy: steps (0, 400, 800, 1200, 1600)
+Debug top5_accuracy: 5 values, 5 steps
+Valid pair found: step 0, value 0.0150146484375
+Valid pair found: step 400, value 0.4647216796875
+Valid pair found: step 800, value 0.5494384765625
+Valid pair found: step 1200, value 0.7227783203125
+Valid pair found: step 1600, value 0.8763427734375
+Returning 5 points for top5_accuracy: steps (0, 400, 800, 1200, 1600)
+Debug top5_accuracy: 5 values, 5 steps
+Valid pair found: step 0, value 0.015869140625
+Valid pair found: step 400, value 0.304931640625
+Valid pair found: step 800, value 0.38818359375
+Valid pair found: step 1200, value 0.419189453125
+Valid pair found: step 1600, value 0.41748046875
+Returning 5 points for top5_accuracy: steps (0, 400, 800, 1200, 1600)
+Debug top5_accuracy: 5 values, 5 steps
+Valid pair found: step 0, value 0.017252604166666668
+Valid pair found: step 400, value 0.3548177083333333
+Valid pair found: step 800, value 0.4420572916666667
+Valid pair found: step 1200, value 0.47314453125
+Valid pair found: step 1600, value 0.4908854166666667
+Returning 5 points for top5_accuracy: steps (0, 400, 800, 1200, 1600)
+
+
+
+
+
+============================================================
+ABLATION STUDY SUMMARY REPORT
+============================================================
+
+🏆 BEST PERFORMING CONFIG: large_batch
+   Final Training Loss: 1.3342
+
+📉 WORST PERFORMING CONFIG: low_lr
+   Final Training Loss: 4.8933
+
+📊 ALL FINAL LOSSES:
+   large_batch: 1.3342
+   high_lr: 2.2270
+   baseline: 3.6422
+   short_seq: 3.8749
+   small_model: 4.0526
+   low_lr: 4.8933
+
+============================================================
+✅ All available plots generated!

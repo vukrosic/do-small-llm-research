@@ -1,0 +1,947 @@
+{
+  "metadata": {
+    "collection_date": "2025-07-20T20:49:06.424040",
+    "experiment_type": "Autoregressive Transformer Language Model Ablation Study",
+    "platform": "Google Colab",
+    "hardware": "Tesla T4 GPU",
+    "framework": "PyTorch",
+    "total_configurations": 6,
+    "training_duration_estimate": "Variable per configuration"
+  },
+  "experimental_setup": {
+    "dataset": {
+      "name": "HuggingFaceTB/smollm-corpus (cosmopedia-v2)",
+      "num_documents": 500,
+      "tokenizer": "HuggingFaceTB/SmolLM-135M",
+      "preprocessing": "Concatenated tokenization with sliding window"
+    },
+    "model_architecture": {
+      "type": "Autoregressive Transformer",
+      "attention_mechanism": "Multi-head attention with RoPE",
+      "activation": "SiLU (Swish)",
+      "normalization": "RMSNorm",
+      "positional_encoding": "Rotary Position Embedding (RoPE)"
+    },
+    "training_setup": {
+      "optimizer": "AdamW with weight decay 0.1",
+      "scheduler": "Cosine Annealing with warmup",
+      "mixed_precision": "Automatic Mixed Precision (AMP)",
+      "gradient_clipping": 1.0,
+      "evaluation_frequency": "Every 400 steps"
+    },
+    "configurations": {
+      "baseline": {
+        "description": "Standard configuration with balanced parameters",
+        "seq_len": 512,
+        "d_model": 384,
+        "n_heads": 6,
+        "n_layers": 12,
+        "d_ff": 1536,
+        "batch_size": 8,
+        "learning_rate": 0.0003,
+        "max_steps": 2000
+      },
+      "small_model": {
+        "description": "Reduced model size for efficiency comparison",
+        "d_model": 256,
+        "n_heads": 4,
+        "n_layers": 8,
+        "d_ff": 1024,
+        "batch_size": 12
+      },
+      "high_lr": {
+        "description": "Higher learning rate experiment",
+        "learning_rate": 0.001
+      },
+      "low_lr": {
+        "description": "Lower learning rate experiment",
+        "learning_rate": 0.0001
+      },
+      "large_batch": {
+        "description": "Larger batch size with scaled learning rate",
+        "batch_size": 16,
+        "learning_rate": 0.0005
+      },
+      "short_seq": {
+        "description": "Shorter sequence length for memory efficiency",
+        "seq_len": 256,
+        "batch_size": 12
+      }
+    }
+  },
+  "results_summary": {
+    "experiment_overview": {
+      "total_configurations": 6,
+      "training_steps_per_config": 2000,
+      "evaluation_frequency": 400,
+      "dataset_size": "500 documents from SmolLM corpus"
+    },
+    "key_findings": {
+      "best_performing_config": "large_batch",
+      "worst_performing_config": "low_lr",
+      "performance_gap": "Calculated from final loss values",
+      "most_efficient_config": "small_model",
+      "least_efficient_config": "high_lr"
+    },
+    "performance_metrics": {
+      "high_lr": {
+        "final_loss": 2.2270498275756836,
+        "final_accuracy": 0.412109375,
+        "final_perplexity": 18.824468460556883
+      },
+      "short_seq": {
+        "final_loss": 3.874924659729004,
+        "final_accuracy": 0.3486328125,
+        "final_perplexity": 43.69459028318509
+      },
+      "baseline": {
+        "final_loss": 3.642197608947754,
+        "final_accuracy": 0.304443359375,
+        "final_perplexity": 48.85239876813527
+      },
+      "large_batch": {
+        "final_loss": 1.3341822624206543,
+        "final_accuracy": 0.6983642578125,
+        "final_perplexity": 4.926475990865711
+      },
+      "low_lr": {
+        "final_loss": 4.893324375152588,
+        "final_accuracy": 0.253662109375,
+        "final_perplexity": 178.18183690462678
+      },
+      "small_model": {
+        "final_loss": 4.052553176879883,
+        "final_accuracy": 0.29443359375,
+        "final_perplexity": 77.24826382479674
+      }
+    },
+    "efficiency_metrics": {},
+    "text_generation_quality": {
+      "high_lr": {
+        "num_samples": 5,
+        "sample_prompts": [
+          "prompt_1",
+          "prompt_2",
+          "prompt_3"
+        ],
+        "generation_success": true
+      },
+      "short_seq": {
+        "num_samples": 5,
+        "sample_prompts": [
+          "prompt_1",
+          "prompt_2",
+          "prompt_3"
+        ],
+        "generation_success": true
+      },
+      "baseline": {
+        "num_samples": 5,
+        "sample_prompts": [
+          "prompt_1",
+          "prompt_2",
+          "prompt_3"
+        ],
+        "generation_success": true
+      },
+      "large_batch": {
+        "num_samples": 5,
+        "sample_prompts": [
+          "prompt_1",
+          "prompt_2",
+          "prompt_3"
+        ],
+        "generation_success": true
+      },
+      "low_lr": {
+        "num_samples": 5,
+        "sample_prompts": [
+          "prompt_1",
+          "prompt_2",
+          "prompt_3"
+        ],
+        "generation_success": true
+      },
+      "small_model": {
+        "num_samples": 5,
+        "sample_prompts": [
+          "prompt_1",
+          "prompt_2",
+          "prompt_3"
+        ],
+        "generation_success": true
+      }
+    }
+  },
+  "detailed_metrics": {
+    "high_lr": {
+      "training_progression": {
+        "train_loss": {
+          "initial": 10.828892707824707,
+          "final": 2.2270498275756836,
+          "min": 2.064769983291626,
+          "max": 10.828892707824707,
+          "progression": [
+            10.828892707824707,
+            6.572873592376709,
+            6.071783065795898,
+            5.700030326843262,
+            5.157863616943359,
+            5.086811065673828,
+            5.191731929779053,
+            4.636477947235107,
+            4.410139083862305,
+            3.972860097885132,
+            3.7986671924591064,
+            3.7467520236968994,
+            3.4056944847106934,
+            3.379373073577881,
+            3.2581284046173096,
+            3.2113535404205322,
+            2.935157537460327,
+            2.6941967010498047,
+            2.781672477722168,
+            2.494943380355835
+          ]
+        },
+        "eval_loss": {
+          "initial": 10.276972150802612,
+          "final": 2.851443576812744,
+          "min": 2.851443576812744,
+          "max": 10.276972150802612,
+          "progression": [
+            10.276972150802612,
+            5.332054352760315,
+            4.324565804004669,
+            3.4632829785346986,
+            2.851443576812744
+          ]
+        },
+        "accuracy": {
+          "initial": 0.01611328125,
+          "final": 0.412109375,
+          "min": 0.01611328125,
+          "max": 0.412109375,
+          "progression": [
+            0.01611328125,
+            0.200439453125,
+            0.256591796875,
+            0.319091796875,
+            0.412109375
+          ]
+        },
+        "perplexity": {
+          "initial": 50457.80431264488,
+          "final": 18.824468460556883,
+          "min": 18.824468460556883,
+          "max": 50457.80431264488,
+          "progression": [
+            50457.80431264488,
+            173.79277078503122,
+            82.28090665469591,
+            30.135216905750916,
+            18.824468460556883
+          ]
+        }
+      },
+      "final_performance": {
+        "train_loss": 2.2270498275756836,
+        "eval_loss": 2.851443576812744,
+        "accuracy": 0.412109375,
+        "perplexity": 18.824468460556883,
+        "avg_confidence": 0.34521484375,
+        "top5_accuracy": 0.6591796875
+      },
+      "convergence_analysis": {
+        "total_improvement": 0.5495073242001104,
+        "early_phase_loss": 6.064405277252197,
+        "late_phase_loss": 2.731970160484314,
+        "converged": "False"
+      },
+      "efficiency_metrics": {
+        "avg_step_time": 0.01647009224579178,
+        "steps_per_second": 60.71611409799521,
+        "step_time_std": 0.005604723948962169
+      }
+    },
+    "short_seq": {
+      "training_progression": {
+        "train_loss": {
+          "initial": 10.81689453125,
+          "final": 3.874924659729004,
+          "min": 3.4810845851898193,
+          "max": 10.81689453125,
+          "progression": [
+            10.81689453125,
+            6.818551540374756,
+            6.078644275665283,
+            5.726295471191406,
+            5.792339324951172,
+            5.333415508270264,
+            5.308156967163086,
+            4.937936782836914,
+            4.741216659545898,
+            4.5353312492370605,
+            4.5043158531188965,
+            4.447535037994385,
+            4.109503746032715,
+            4.094851016998291,
+            4.0344109535217285,
+            3.888704299926758,
+            3.77722430229187,
+            3.8425257205963135,
+            3.74658465385437,
+            3.720388412475586
+          ]
+        },
+        "eval_loss": {
+          "initial": 10.382567739486694,
+          "final": 3.9792752504348754,
+          "min": 3.9792752504348754,
+          "max": 10.382567739486694,
+          "progression": [
+            10.382567739486694,
+            5.5507351636886595,
+            4.76495475769043,
+            4.277226614952087,
+            3.9792752504348754
+          ]
+        },
+        "accuracy": {
+          "initial": 0.014322916977107525,
+          "final": 0.3486328125,
+          "min": 0.014322916977107525,
+          "max": 0.3486328125,
+          "progression": [
+            0.014322916977107525,
+            0.1923828125,
+            0.28515625,
+            0.3160807490348816,
+            0.3486328125
+          ]
+        },
+        "perplexity": {
+          "initial": 49856.020043092205,
+          "final": 43.69459028318509,
+          "min": 43.69459028318509,
+          "max": 49856.020043092205,
+          "progression": [
+            49856.020043092205,
+            327.77890958116524,
+            114.57351387458085,
+            60.91648002260715,
+            43.69459028318509
+          ]
+        }
+      },
+      "final_performance": {
+        "train_loss": 3.874924659729004,
+        "eval_loss": 3.9792752504348754,
+        "accuracy": 0.3486328125,
+        "perplexity": 43.69459028318509,
+        "avg_confidence": 0.29052734375,
+        "top5_accuracy": 0.5514322916666666
+      },
+      "convergence_analysis": {
+        "total_improvement": 0.3823910720508928,
+        "early_phase_loss": 6.256714632987976,
+        "late_phase_loss": 3.864202816963196,
+        "converged": "False"
+      },
+      "efficiency_metrics": {
+        "avg_step_time": 0.015486011753330479,
+        "steps_per_second": 64.57440533615353,
+        "step_time_std": 0.0032806451664996435
+      }
+    },
+    "baseline": {
+      "training_progression": {
+        "train_loss": {
+          "initial": 10.829690933227539,
+          "final": 3.642197608947754,
+          "min": 3.1865904331207275,
+          "max": 10.829690933227539,
+          "progression": [
+            10.829690933227539,
+            6.852599143981934,
+            6.0306572914123535,
+            5.741209030151367,
+            5.5287041664123535,
+            5.422491073608398,
+            5.1060791015625,
+            4.922484874725342,
+            4.726229190826416,
+            4.655921936035156,
+            4.535637378692627,
+            4.182061672210693,
+            4.014654636383057,
+            3.9975409507751465,
+            3.665085792541504,
+            3.646862506866455,
+            3.888803482055664,
+            3.8172643184661865,
+            3.7060296535491943,
+            3.432166814804077
+          ]
+        },
+        "eval_loss": {
+          "initial": 10.397811031341552,
+          "final": 3.8515960574150085,
+          "min": 3.8515960574150085,
+          "max": 10.397811031341552,
+          "progression": [
+            10.397811031341552,
+            5.483714485168457,
+            4.649899220466613,
+            4.161080586910248,
+            3.8515960574150085
+          ]
+        },
+        "accuracy": {
+          "initial": 0.01318359375,
+          "final": 0.304443359375,
+          "min": 0.01318359375,
+          "max": 0.314697265625,
+          "progression": [
+            0.01318359375,
+            0.21533203125,
+            0.255126953125,
+            0.314697265625,
+            0.304443359375
+          ]
+        },
+        "perplexity": {
+          "initial": 50498.09709303937,
+          "final": 48.85239876813527,
+          "min": 48.85239876813527,
+          "max": 50498.09709303937,
+          "progression": [
+            50498.09709303937,
+            251.81738608137283,
+            112.86915086625599,
+            55.404157517685526,
+            48.85239876813527
+          ]
+        }
+      },
+      "final_performance": {
+        "train_loss": 3.642197608947754,
+        "eval_loss": 3.8515960574150085,
+        "accuracy": 0.304443359375,
+        "perplexity": 48.85239876813527,
+        "avg_confidence": 0.260009765625,
+        "top5_accuracy": 0.535888671875
+      },
+      "convergence_analysis": {
+        "total_improvement": 0.38741994702187377,
+        "early_phase_loss": 6.188639238357544,
+        "late_phase_loss": 3.791036952495575,
+        "converged": "False"
+      },
+      "efficiency_metrics": {
+        "avg_step_time": 0.0155010657744842,
+        "steps_per_second": 64.51169323118849,
+        "step_time_std": 0.003531987747113671
+      }
+    },
+    "large_batch": {
+      "training_progression": {
+        "train_loss": {
+          "initial": 10.817829132080078,
+          "final": 1.3341822624206543,
+          "min": 1.1587989330291748,
+          "max": 10.817829132080078,
+          "progression": [
+            10.817829132080078,
+            6.306700229644775,
+            5.619090557098389,
+            4.976771354675293,
+            4.644998550415039,
+            4.321454048156738,
+            3.9683783054351807,
+            3.757868766784668,
+            3.6018807888031006,
+            3.2601263523101807,
+            2.857438325881958,
+            2.5935189723968506,
+            2.4813120365142822,
+            2.020472764968872,
+            2.014394760131836,
+            1.7167375087738037,
+            1.5946239233016968,
+            1.4222501516342163,
+            1.4819538593292236,
+            1.42548668384552
+          ]
+        },
+        "eval_loss": {
+          "initial": 10.27527151107788,
+          "final": 1.6126207530498504,
+          "min": 1.6126207530498504,
+          "max": 10.27527151107788,
+          "progression": [
+            10.27527151107788,
+            4.665372514724732,
+            3.427960550785065,
+            2.388069784641266,
+            1.6126207530498504
+          ]
+        },
+        "accuracy": {
+          "initial": 0.014892578125,
+          "final": 0.6983642578125,
+          "min": 0.014892578125,
+          "max": 0.6983642578125,
+          "progression": [
+            0.014892578125,
+            0.2625732421875,
+            0.3209228515625,
+            0.509765625,
+            0.6983642578125
+          ]
+        },
+        "perplexity": {
+          "initial": 49902.63730167989,
+          "final": 4.926475990865711,
+          "min": 4.926475990865711,
+          "max": 49902.63730167989,
+          "progression": [
+            49902.63730167989,
+            104.06321493683463,
+            36.66713276451822,
+            11.956942075372574,
+            4.926475990865711
+          ]
+        }
+      },
+      "final_performance": {
+        "train_loss": 1.3341822624206543,
+        "eval_loss": 1.6126207530498504,
+        "accuracy": 0.6983642578125,
+        "perplexity": 4.926475990865711,
+        "avg_confidence": 0.50244140625,
+        "top5_accuracy": 0.8763427734375
+      },
+      "convergence_analysis": {
+        "total_improvement": 0.7344219029123921,
+        "early_phase_loss": 5.547637411117554,
+        "late_phase_loss": 1.4733309869766236,
+        "converged": "False"
+      },
+      "efficiency_metrics": {
+        "avg_step_time": 0.015842307198632347,
+        "steps_per_second": 63.12211898569478,
+        "step_time_std": 0.0034188452366395463
+      }
+    },
+    "low_lr": {
+      "training_progression": {
+        "train_loss": {
+          "initial": 10.817056655883789,
+          "final": 4.893324375152588,
+          "min": 4.736352443695068,
+          "max": 10.817056655883789,
+          "progression": [
+            10.817056655883789,
+            7.465259552001953,
+            6.7647271156311035,
+            6.420642375946045,
+            6.332608222961426,
+            6.287199020385742,
+            5.915299415588379,
+            5.6782026290893555,
+            5.55415678024292,
+            5.631474018096924,
+            5.530788421630859,
+            5.4498090744018555,
+            5.178886413574219,
+            5.431338310241699,
+            5.217175006866455,
+            5.152012348175049,
+            5.182804584503174,
+            5.267621040344238,
+            5.099447250366211,
+            5.102288246154785
+          ]
+        },
+        "eval_loss": {
+          "initial": 10.638360452651977,
+          "final": 5.180021476745606,
+          "min": 5.180021476745606,
+          "max": 10.638360452651977,
+          "progression": [
+            10.638360452651977,
+            6.184940147399902,
+            5.6361103534698485,
+            5.346322393417358,
+            5.180021476745606
+          ]
+        },
+        "accuracy": {
+          "initial": 0.015869140625,
+          "final": 0.253662109375,
+          "min": 0.015869140625,
+          "max": 0.253662109375,
+          "progression": [
+            0.015869140625,
+            0.171630859375,
+            0.21337890625,
+            0.24169921875,
+            0.253662109375
+          ]
+        },
+        "perplexity": {
+          "initial": 49864.10358733699,
+          "final": 178.18183690462678,
+          "min": 177.4850559560461,
+          "max": 49864.10358733699,
+          "progression": [
+            49864.10358733699,
+            562.6221257521954,
+            258.3090613593886,
+            177.4850559560461,
+            178.18183690462678
+          ]
+        }
+      },
+      "final_performance": {
+        "train_loss": 4.893324375152588,
+        "eval_loss": 5.180021476745606,
+        "accuracy": 0.253662109375,
+        "perplexity": 178.18183690462678,
+        "avg_confidence": 0.2166748046875,
+        "top5_accuracy": 0.41748046875
+      },
+      "convergence_analysis": {
+        "total_improvement": 0.2563331669081447,
+        "early_phase_loss": 6.9447983465194705,
+        "late_phase_loss": 5.164616192817688,
+        "converged": "False"
+      },
+      "efficiency_metrics": {
+        "avg_step_time": 0.01580963413854907,
+        "steps_per_second": 63.25257063107312,
+        "step_time_std": 0.003447557066092024
+      }
+    },
+    "small_model": {
+      "training_progression": {
+        "train_loss": {
+          "initial": 10.787567138671875,
+          "final": 4.052553176879883,
+          "min": 3.806811571121216,
+          "max": 10.787567138671875,
+          "progression": [
+            10.787567138671875,
+            6.982694625854492,
+            6.325865268707275,
+            5.8929901123046875,
+            5.7095255851745605,
+            5.590511322021484,
+            5.058628082275391,
+            5.299217224121094,
+            4.870635986328125,
+            4.925236225128174,
+            4.6347737312316895,
+            4.460249423980713,
+            4.434326171875,
+            4.391922950744629,
+            4.31215763092041,
+            4.326354503631592,
+            4.347024440765381,
+            4.240586757659912,
+            4.221031188964844,
+            4.11255407333374
+          ]
+        },
+        "eval_loss": {
+          "initial": 10.615600633621217,
+          "final": 4.2102068901062015,
+          "min": 4.2102068901062015,
+          "max": 10.615600633621217,
+          "progression": [
+            10.615600633621217,
+            5.630042052268982,
+            4.89114351272583,
+            4.4527472972869875,
+            4.2102068901062015
+          ]
+        },
+        "accuracy": {
+          "initial": 0.0172526054084301,
+          "final": 0.29443359375,
+          "min": 0.0172526054084301,
+          "max": 0.29443359375,
+          "progression": [
+            0.0172526054084301,
+            0.2052408903837204,
+            0.2513020932674408,
+            0.2732747495174408,
+            0.29443359375
+          ]
+        },
+        "perplexity": {
+          "initial": 48415.10538147427,
+          "final": 77.24826382479674,
+          "min": 77.24826382479674,
+          "max": 48415.10538147427,
+          "progression": [
+            48415.10538147427,
+            301.7278901382283,
+            130.40382557947356,
+            84.29530519963942,
+            77.24826382479674
+          ]
+        }
+      },
+      "final_performance": {
+        "train_loss": 4.052553176879883,
+        "eval_loss": 4.2102068901062015,
+        "accuracy": 0.29443359375,
+        "perplexity": 77.24826382479674,
+        "avg_confidence": 0.2578125,
+        "top5_accuracy": 0.4908854166666667
+      },
+      "convergence_analysis": {
+        "total_improvement": 0.34920937770381233,
+        "early_phase_loss": 6.434232378005982,
+        "late_phase_loss": 4.187338093280792,
+        "converged": "False"
+      },
+      "efficiency_metrics": {
+        "avg_step_time": 0.011398880928009003,
+        "steps_per_second": 87.72790998656971,
+        "step_time_std": 0.0023849119314276247
+      }
+    }
+  },
+  "text_samples": {
+    "high_lr": {
+      "prompt_1": {
+        "prompt": "The future of artificial intelligence",
+        "generated": "The future of artificial intelligenceand understanding the marine biome by the marine biome. However, significant advantages in shaping their energy levels, the marine populations and tolerances.\n\nConclusion: Render Opinions\n\nModern technology has gained",
+        "generated_only": "and understanding the marine biome by the marine biome. However, significant advantages in shaping their energy levels, the marine populations and tolerances.\n\nConclusion: Render Opinions\n\nModern technology has gained"
+      },
+      "prompt_2": {
+        "prompt": "In a world where technology",
+        "generated": "In a world where technologytechnology have implemented various industries, organizations and visualize and build dedication to meeting their defining properties. They work towards achieving success, and perspectives, specifically focusing on providing long-art)\n\n* Mario V",
+        "generated_only": "technology have implemented various industries, organizations and visualize and build dedication to meeting their defining properties. They work towards achieving success, and perspectives, specifically focusing on providing long-art)\n\n* Mario V"
+      },
+      "prompt_3": {
+        "prompt": "Scientists have discovered",
+        "generated": "Scientists have discoveredthat after World War sometimes people believed that musicians couldn't easy.\n\nNow, why why people learn about Hinduism, sometimes people need food, though, they became around such incredible life isn't it",
+        "generated_only": "that after World War sometimes people believed that musicians couldn't easy.\n\nNow, why why people learn about Hinduism, sometimes people need food, though, they became around such incredible life isn't it"
+      },
+      "prompt_4": {
+        "prompt": "The most important lesson in life",
+        "generated": "The most important lesson in life. These are often requires patience, and recognizing that reveal how to help us to be wondering what exactly what? Well, but also called 'root') and their map.'\n\nMithara.'",
+        "generated_only": ". These are often requires patience, and recognizing that reveal how to help us to be wondering what exactly what? Well, but also called 'root') and their map.'\n\nMithara.'"
+      },
+      "prompt_5": {
+        "prompt": "Once upon a time in a distant",
+        "generated": "Once upon a time in a distantnorms, and practices. However, many European Union manifests itself arises yet challenging established hierarchies, the eighth day, they added to flourish. So, we aren't have a big, but well as essential",
+        "generated_only": "norms, and practices. However, many European Union manifests itself arises yet challenging established hierarchies, the eighth day, they added to flourish. So, we aren't have a big, but well as essential"
+      }
+    },
+    "short_seq": {
+      "prompt_1": {
+        "prompt": "The future of artificial intelligence",
+        "generated": "The future of artificial intelligencealgorithms, has significantly within their impacts. In the factors, we will explore how these risk of death, such as actual folks!\n\nIn summary, understanding the nature of providing opportunities that strive to",
+        "generated_only": "algorithms, has significantly within their impacts. In the factors, we will explore how these risk of death, such as actual folks!\n\nIn summary, understanding the nature of providing opportunities that strive to"
+      },
+      "prompt_2": {
+        "prompt": "In a world where technology",
+        "generated": "In a world where technologyhelps us understand that can help us understand better reflect the complexities of science fiction, like us appreciate similarities and understanding. This unit, we can focus on our world, opening up to our unique features,",
+        "generated_only": "helps us understand that can help us understand better reflect the complexities of science fiction, like us appreciate similarities and understanding. This unit, we can focus on our world, opening up to our unique features,"
+      },
+      "prompt_3": {
+        "prompt": "Scientists have discovered",
+        "generated": "Scientists have discovered, many famous ones, or other people. They relate to what? They were playing a amounts of magic of like a lot since they in! For example, something would start by a book is like",
+        "generated_only": ", many famous ones, or other people. They relate to what? They were playing a amounts of magic of like a lot since they in! For example, something would start by a book is like"
+      },
+      "prompt_4": {
+        "prompt": "The most important lesson in life",
+        "generated": "The most important lesson in lifein Canada's dive deeper into the world of its history and how it!\n\nSection 1: What is fitting for the overall. For instance, everyone, j which means that or Groit",
+        "generated_only": "in Canada's dive deeper into the world of its history and how it!\n\nSection 1: What is fitting for the overall. For instance, everyone, j which means that or Groit"
+      },
+      "prompt_5": {
+        "prompt": "Once upon a time in a distant",
+        "generated": "Once upon a time in a distantvital role in shaping its practice. Through understanding, you can guide you are and profoundly with your audience and learn about how they were all. Some energy might look for these fascinating world of stone, there",
+        "generated_only": "vital role in shaping its practice. Through understanding, you can guide you are and profoundly with your audience and learn about how they were all. Some energy might look for these fascinating world of stone, there"
+      }
+    },
+    "baseline": {
+      "prompt_1": {
+        "prompt": "The future of artificial intelligence",
+        "generated": "The future of artificial intelligence, and the complex project depicted in the Roman Ram layer switch gears and a deeper into youth. It was all day, he started creating a small town. But did you imagine a bit of Nasser",
+        "generated_only": ", and the complex project depicted in the Roman Ram layer switch gears and a deeper into youth. It was all day, he started creating a small town. But did you imagine a bit of Nasser"
+      },
+      "prompt_2": {
+        "prompt": "In a world where technology",
+        "generated": "In a world where technology, we can analyze data and the way to Internet of South Carolina?\n\n\nImagine this, let's why they are all this? Or maybe even if you a new stringed. It's",
+        "generated_only": ", we can analyze data and the way to Internet of South Carolina?\n\n\nImagine this, let's why they are all this? Or maybe even if you a new stringed. It's"
+      },
+      "prompt_3": {
+        "prompt": "Scientists have discovered",
+        "generated": "Scientists have discoveredthat experience or working with local communities and emotions. These focus will gain a powerful role in moments can be similarly to your strong and share stories with unique perspective.\n\nSection 2: Creamy",
+        "generated_only": "that experience or working with local communities and emotions. These focus will gain a powerful role in moments can be similarly to your strong and share stories with unique perspective.\n\nSection 2: Creamy"
+      },
+      "prompt_4": {
+        "prompt": "The most important lesson in life",
+        "generated": "The most important lesson in life. We will explore how people, and connection with their animated, the unique words. You can share their their places, \"The Mahanta\" is essential to connect with \"The importance of self-",
+        "generated_only": ". We will explore how people, and connection with their animated, the unique words. You can share their their places, \"The Mahanta\" is essential to connect with \"The importance of self-"
+      },
+      "prompt_5": {
+        "prompt": "Once upon a time in a distant",
+        "generated": "Once upon a time in a distantfrom others. By engaging in modern society, waiting for locals and others others to see home. One brain should now knowing about the world where people were designed to be enjoyed by something like how much about",
+        "generated_only": "from others. By engaging in modern society, waiting for locals and others others to see home. One brain should now knowing about the world where people were designed to be enjoyed by something like how much about"
+      }
+    },
+    "large_batch": {
+      "prompt_1": {
+        "prompt": "The future of artificial intelligence",
+        "generated": "The future of artificial intelligenceand machine learning. Who knew we can affect our opening our next time while we will help bring our brains extensively.\n\n### Method2 of 3 of Basic Perspectives\n\nLike what happens when",
+        "generated_only": "and machine learning. Who knew we can affect our opening our next time while we will help bring our brains extensively.\n\n### Method2 of 3 of Basic Perspectives\n\nLike what happens when"
+      },
+      "prompt_2": {
+        "prompt": "In a world where technology",
+        "generated": "In a world where technologyinto various medicine. They have been many generations, like the way, and understanding the world of businesses efficiently. This way, businesses can help businesses operate fairly, businesses as less long ago, ensuring doctors",
+        "generated_only": "into various medicine. They have been many generations, like the way, and understanding the world of businesses efficiently. This way, businesses can help businesses operate fairly, businesses as less long ago, ensuring doctors"
+      },
+      "prompt_3": {
+        "prompt": "Scientists have discovered",
+        "generated": "Scientists have discoveredthere are ways to solve real-life characters called propaganda posters. For example, when politicians act more millennia, agoras, water are hearts, water sports, and issues like the most common values.",
+        "generated_only": "there are ways to solve real-life characters called propaganda posters. For example, when politicians act more millennia, agoras, water are hearts, water sports, and issues like the most common values."
+      },
+      "prompt_4": {
+        "prompt": "The most important lesson in life",
+        "generated": "The most important lesson in life, the next step in the next step in all about the future. How cool is that that you can learn about various sized sizes of thought they can help guide everyone in small small town?",
+        "generated_only": ", the next step in the next step in all about the future. How cool is that that you can learn about various sized sizes of thought they can help guide everyone in small small town?"
+      },
+      "prompt_5": {
+        "prompt": "Once upon a time in a distant",
+        "generated": "Once upon a time in a distantrelations between their decisions and forth through their actions. By placing such as an eternity, she said reverent, I decided to go of a long time and Michael Pnyx, regardless of their initial",
+        "generated_only": "relations between their decisions and forth through their actions. By placing such as an eternity, she said reverent, I decided to go of a long time and Michael Pnyx, regardless of their initial"
+      }
+    },
+    "low_lr": {
+      "prompt_1": {
+        "prompt": "The future of artificial intelligence",
+        "generated": "The future of artificial intelligenceby incorporating elements into deeper into modern issues like theages. Eventually, many sound like like a words, while fostering sound, making them more when it's talk about it would then find the very special",
+        "generated_only": "by incorporating elements into deeper into modern issues like theages. Eventually, many sound like like a words, while fostering sound, making them more when it's talk about it would then find the very special"
+      },
+      "prompt_2": {
+        "prompt": "In a world where technology",
+        "generated": "In a world where technology, amidst the interval inside the role in the category of the Each close. One Deep desires and file of groundbreakingical systems.\n\nImagine a time. When you ever wondered how a enough, learning",
+        "generated_only": ", amidst the interval inside the role in the category of the Each close. One Deep desires and file of groundbreakingical systems.\n\nImagine a time. When you ever wondered how a enough, learning"
+      },
+      "prompt_3": {
+        "prompt": "Scientists have discovered",
+        "generated": "Scientists have discoveredit's when when we have much as open to become a point for the world. We've been several aspects of Victoria fighter continued to the United States. They now itrum\n\nIn this city",
+        "generated_only": "it's when when we have much as open to become a point for the world. We've been several aspects of Victoria fighter continued to the United States. They now itrum\n\nIn this city"
+      },
+      "prompt_4": {
+        "prompt": "The most important lesson in life",
+        "generated": "The most important lesson in life.\n\nBy Confucianism, which were human treats run up in technology and come. By learning to better. By as a new people, she was something!\n\nNow that families may just like",
+        "generated_only": ".\n\nBy Confucianism, which were human treats run up in technology and come. By learning to better. By as a new people, she was something!\n\nNow that families may just like"
+      },
+      "prompt_5": {
+        "prompt": "Once upon a time in a distant",
+        "generated": "Once upon a time in a distantcorner of a few years throughout the current trends, voters with a transcendental piece of a \"\")),idered||.\n\nV**: She was a manization - Aaronvioli. If Maya, \"",
+        "generated_only": "corner of a few years throughout the current trends, voters with a transcendental piece of a \"\")),idered||.\n\nV**: She was a manization - Aaronvioli. If Maya, \""
+      }
+    },
+    "small_model": {
+      "prompt_1": {
+        "prompt": "The future of artificial intelligence",
+        "generated": "The future of artificial intelligenceand airtight full of the world. You might know does not become a group of a secret message iterates which helps people. This process of the rest of this begins before. At its protective of the",
+        "generated_only": "and airtight full of the world. You might know does not become a group of a secret message iterates which helps people. This process of the rest of this begins before. At its protective of the"
+      },
+      "prompt_2": {
+        "prompt": "In a world where technology",
+        "generated": "In a world where technology, we can pick out of medical techniques to establish a more enjoyable and your creativity.\n\nIntroduction:\n\nThere are many people over a good lively food, and actions that, and their operations",
+        "generated_only": ", we can pick out of medical techniques to establish a more enjoyable and your creativity.\n\nIntroduction:\n\nThere are many people over a good lively food, and actions that, and their operations"
+      },
+      "prompt_3": {
+        "prompt": "Scientists have discovered",
+        "generated": "Scientists have discoveredthat her family's no shot to live and responsible for her work and benefits.\n\nOne notable example, the way, how achievements and social issues like legionn = Tasn)times 1",
+        "generated_only": "that her family's no shot to live and responsible for her work and benefits.\n\nOne notable example, the way, how achievements and social issues like legionn = Tasn)times 1"
+      },
+      "prompt_4": {
+        "prompt": "The most important lesson in life",
+        "generated": "The most important lesson in life. First, they can be playing your brain using your questions, or groups, and keep your Indiegogo network.\n\n### Approach During this unit, analyze your diversity into one of the following",
+        "generated_only": ". First, they can be playing your brain using your questions, or groups, and keep your Indiegogo network.\n\n### Approach During this unit, analyze your diversity into one of the following"
+      },
+      "prompt_5": {
+        "prompt": "Once upon a time in a distant",
+        "generated": "Once upon a time in a distantof different regions, it is out to the first powerful workouts are tomato.\n\nIn conclusion, these crimes are known for these risk of war and children, drawing connections, and its its rich in",
+        "generated_only": "of different regions, it is out to the first powerful workouts are tomato.\n\nIn conclusion, these crimes are known for these risk of war and children, drawing connections, and its its rich in"
+      }
+    }
+  },
+  "statistical_analysis": {
+    "performance_ranking": {
+      "by_loss": [
+        [
+          "large_batch",
+          1.3341822624206543
+        ],
+        [
+          "high_lr",
+          2.2270498275756836
+        ],
+        [
+          "baseline",
+          3.642197608947754
+        ],
+        [
+          "short_seq",
+          3.874924659729004
+        ],
+        [
+          "small_model",
+          4.052553176879883
+        ],
+        [
+          "low_lr",
+          4.893324375152588
+        ]
+      ],
+      "best_config": "large_batch",
+      "worst_config": "low_lr"
+    },
+    "statistical_significance": {},
+    "correlation_analysis": {},
+    "efficiency_analysis": {
+      "ranking": [
+        [
+          "small_model",
+          87.72790998656971
+        ],
+        [
+          "short_seq",
+          64.57440533615353
+        ],
+        [
+          "baseline",
+          64.51169323118849
+        ],
+        [
+          "low_lr",
+          63.25257063107312
+        ],
+        [
+          "large_batch",
+          63.12211898569478
+        ],
+        [
+          "high_lr",
+          60.71611409799521
+        ]
+      ],
+      "fastest_config": "small_model",
+      "slowest_config": "high_lr"
+    }
+  },
+  "visualizations": {}
+}
