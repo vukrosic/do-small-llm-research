@@ -31,7 +31,7 @@ This repository contains a comprehensive ablation study of small-scale autoregre
 
 Done in **[Google Colab](https://colab.research.google.com/drive/1Fn5Dw-8xKKSt915dwNvqLwA7V0Bdw0IY?usp=sharing)**
 
-If you are unable to access it, download it from here - 
+If you are unable to access it, download it from [here](https://github.com/vukrosic/do-small-llm-research/blob/main/15min_llm_ablations.ipynb)
 
 ## 📈 Configurations Tested
 
