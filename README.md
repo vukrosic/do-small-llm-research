@@ -1,4 +1,4 @@
-# Rapid Optimization of Small Transformers: 15-Minute Pretraining Ablations
+# Rapid Optimization of Small Transformers: 15-Minute Pretraining Ablations ![](https://img.shields.io/badge/lang-EN--中文-blue)
 
 English | [中文版本](README_zh.md) 
 
