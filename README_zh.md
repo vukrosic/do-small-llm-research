@@ -1,5 +1,4 @@
 # 小型 Transformer 快速优化：15 分钟预训练消融实验 ![](https://img.shields.io/badge/lang-EN--中文-blue)
-**中文版本 README**
 
 [English](README.md) | **中文版本**
 
