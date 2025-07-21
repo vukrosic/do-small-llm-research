@@ -1,8 +1,8 @@
 # Rapid Optimization of Small Transformers: 15-Minute Pretraining Ablations ![](https://img.shields.io/badge/lang-EN--中文-blue)
 
-English | [中文版本](README_zh.md) 
+**English** | [中文版本](README_zh.md)
 
-Run the experiments yourself: **[Google Colab](https://colab.research.google.com/drive/1Fn5Dw-8xKKSt915dwNvqLwA7V0Bdw0IY?usp=sharing)** or [GitHub](https://github.com/vukrosic/do-small-llm-research/blob/main/15min_llm_ablations.ipynb)
+Run the experiments yourself: 🚀 **[Google Colab](https://colab.research.google.com/drive/1Fn5Dw-8xKKSt915dwNvqLwA7V0Bdw0IY?usp=sharing)** or 💻 [GitHub](https://github.com/vukrosic/do-small-llm-research/blob/main/15min_llm_ablations.ipynb)
 
 ## Overview
 
