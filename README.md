@@ -4,8 +4,9 @@
 
 Easily do research - 🚀 **[Google Colab](https://colab.research.google.com/drive/1Fn5Dw-8xKKSt915dwNvqLwA7V0Bdw0IY?usp=sharing)** or 💻 [GitHub](https://github.com/vukrosic/do-small-llm-research/blob/main/15min_llm_ablations.ipynb)
 
-[YouTube Video](https://youtu.be/Z9ADNoge4P8)
-[Bilibili Video](https://www.bilibili.com/video/BV1H3gVzUEyF/)
+🎥 [YouTube Video](https://youtu.be/Z9ADNoge4P8)
+
+📺 [Bilibili Video](https://www.bilibili.com/video/BV1H3gVzUEyF/)
 
 Change code yourself or copy-paste code from the notebook cells into an LLM for quick coding.
 
