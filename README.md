@@ -1,6 +1,6 @@
 # Rapid Optimization of Small Transformers: 15-Minute Pretraining Ablations
 
-English[中文版本] | (README_zh.md) 
+English | [中文版本](README_zh.md) 
 
 Run the experiments yourself: **[Colab Notebook](https://colab.research.google.com/drive/1Fn5Dw-8xKKSt915dwNvqLwA7V0Bdw0IY?usp=sharing)**
 
@@ -193,14 +193,15 @@ The repository includes comprehensive visualizations:
 
 ## 📝 Citation
 
-If you use this work in your research, please cite:
+If you wish to cite:
 
 ```bibtex
-@article{rosic2025transformer_ablation,
+@misc{rosic2025transformer_ablation,
   title={Rapid Optimization of Small-Scale Transformer Language Models: 15-Minute Pretraining Ablations on Learning Rates, Batch Sizes, and Architectural Efficiency in Resource-Constrained Settings},
   author={Rosić, Vuk and Claude},
-  journal={arXiv preprint},
-  year={2025}
+  year={2025},
+  note={GitHub-hosted research paper},
+  howpublished={\url{https://github.com/vukrosic/do-small-llm-research}}
 }
 ```
 
