@@ -2,7 +2,9 @@
 
 **English** | [中文版本](README_zh.md)
 
-Easily do research by modifying my code (you can copy paste code from cells into an LLM) 🚀 **[Google Colab](https://colab.research.google.com/drive/1Fn5Dw-8xKKSt915dwNvqLwA7V0Bdw0IY?usp=sharing)** or 💻 [GitHub](https://github.com/vukrosic/do-small-llm-research/blob/main/15min_llm_ablations.ipynb)
+Easily do research - 🚀 **[Google Colab](https://colab.research.google.com/drive/1Fn5Dw-8xKKSt915dwNvqLwA7V0Bdw0IY?usp=sharing)** or 💻 [GitHub](https://github.com/vukrosic/do-small-llm-research/blob/main/15min_llm_ablations.ipynb)
+
+Change code yourself or copy-paste code from the notebook cells into an LLM for quick coding.
 
 ## Overview
 
