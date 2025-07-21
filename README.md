@@ -1,9 +1,8 @@
 # Rapid Optimization of Small Transformers: 15-Minute Pretraining Ablations
 
-[中文版本](README_zh.md) | English
+English[中文版本] | (README_zh.md) 
 
-Run the experiments yourself: **[Colab No
-tebook](https://colab.research.google.com/drive/1Fn5Dw-8xKKSt915dwNvqLwA7V0Bdw0IY?usp=sharing)**
+Run the experiments yourself: **[Colab Notebook](https://colab.research.google.com/drive/1Fn5Dw-8xKKSt915dwNvqLwA7V0Bdw0IY?usp=sharing)**
 
 ## Overview
 
@@ -28,58 +27,11 @@ This repository contains a comprehensive ablation study of small-scale autoregre
 | Small Model   | 4.053      | 29.4%    | 77.25      | **87.73**    |
 | Low LR        | 4.893      | 25.4%    | 178.18     | 63.25        |
 
-## 🏗️ Repository Structure
-
-```
-├── paper.tex                           # Research paper (LaTeX)
-├── research/                           # Research data and results
-│   ├── research_data.json             # Complete experimental data
-│   ├── performance_metrics.csv        # Performance metrics
-│   ├── research_report.md             # Detailed analysis report
-│   ├── training_loss_comparison.png   # Training curves
-│   ├── final_performance_comparison.png
-│   ├── efficiency_analysis.png
-│   └── convergence_analysis.png
-├── training_logs/                      # Raw training logs
-├── AR-Transformer-LLM.py             # Main training script
-├── enhanced_training.py               # Enhanced training utilities
-├── research_data_collector.py         # Data collection utilities
-├── plot_ablation_results.py          # Visualization scripts
-└── colab_usage_guide.py              # Google Colab integration guide
-```
-
 ## 🔧 Quick Start
 
-### Prerequisites
+Done in **[Google Colab](https://colab.research.google.com/drive/1Fn5Dw-8xKKSt915dwNvqLwA7V0Bdw0IY?usp=sharing)**
 
-```bash
-pip install torch transformers datasets matplotlib seaborn pandas numpy
-```
-
-### Running Experiments
-
-1. **Single Configuration Training**:
-```bash
-python AR-Transformer-LLM.py --config baseline
-```
-
-2. **Full Ablation Study**:
-```bash
-python enhanced_training.py --run-all-configs
-```
-
-3. **Generate Plots**:
-```bash
-python plot_ablation_results.py
-```
-
-### Google Colab
-
-For easy experimentation in Google Colab:
-```python
-# Run this in Colab
-exec(open('colab_usage_guide.py').read())
-```
+If you are unable to access it, download it from here - 
 
 ## 📈 Configurations Tested
 
